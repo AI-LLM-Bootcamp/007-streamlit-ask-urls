@@ -1,0 +1,6 @@
+langchain
+openai
+streamlit
+libmagic
+python-magic
+python-magic-bin
