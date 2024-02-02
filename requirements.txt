@@ -1,6 +1,6 @@
-langchain
-openai
 streamlit
+langchain
+langchain-openai
 libmagic
 python-magic
 python-magic-bin
