@@ -5,4 +5,4 @@ libmagic
 python-magic
 langchain-community
 faiss-cpu
-beautifulsoup4
+bs4
