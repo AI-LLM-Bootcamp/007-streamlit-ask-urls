@@ -10,7 +10,7 @@ from langchain_openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import WebBaseLoader
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
 file_path = "faiss_store_openai.pkl"
@@ -39,10 +39,7 @@ def get_openai_api_key():
 
 openai_api_key = get_openai_api_key()
 
-urls = []
-for i in range(3):
-    url = st.text_input(f"URL {i+1}")
-    urls.append(url)
+url = st.text_input
 
 process_url_clicked = st.button("Click to load the URLs")
 
@@ -54,14 +51,11 @@ if process_url_clicked:
         st.stop()
     
     # load data
-    loader = WebBaseLoader(urls=urls)
+    loader = WebBaseLoader(url)
     data = loader.load()
     
     # split data
-    text_splitter = RecursiveCharacterTextSplitter(
-        separators=['\n\n', '\n', '.', ','],
-        chunk_size=500
-    )
+    text_splitter = RecursiveCharacterTextSplitter()
 
     docs = text_splitter.split_documents(data)
     
