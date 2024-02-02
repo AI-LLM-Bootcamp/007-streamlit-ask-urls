@@ -5,7 +5,7 @@
 import streamlit as st
 import os
 import pickle
-from langchain.propmts import PromptTemplate
+from langchain.prompts import PromptTemplate
 from langchain_openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
