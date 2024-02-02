@@ -6,7 +6,7 @@ import streamlit as st
 import os
 import pickle
 from langchain import PromptTemplate
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import UnstructuredURLLoader
