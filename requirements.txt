@@ -3,3 +3,6 @@ langchain
 langchain-openai
 libmagic
 python-magic
+langchain-community
+faiss-cpu
+unstructured
