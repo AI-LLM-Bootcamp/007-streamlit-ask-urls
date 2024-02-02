@@ -3,4 +3,3 @@ langchain
 langchain-openai
 libmagic
 python-magic
-python-magic-bin
