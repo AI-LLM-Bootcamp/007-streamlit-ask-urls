@@ -9,7 +9,7 @@ from langchain.prompts import PromptTemplate
 from langchain_openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import UnstructuredURLLoader
+from langchain_community.document_loaders import WebBaseLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
@@ -54,7 +54,7 @@ if process_url_clicked:
         st.stop()
     
     # load data
-    loader = UnstructuredURLLoader(urls=urls)
+    loader = WebBaseLoader(urls=urls)
     data = loader.load()
     
     # split data
