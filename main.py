@@ -39,7 +39,7 @@ def get_openai_api_key():
 
 openai_api_key = get_openai_api_key()
 
-url = st.text_input
+url = st.text_input("Enter url: ")
 
 process_url_clicked = st.button("Click to load the URLs")
 
